@@ -1,0 +1,93 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body {
+  background-color: #ee5866;
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  color: #f2f2f2;
+}
+
+h1 {
+  font-size: 55px;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 38px;
+  }
+
+  @media only screen and (max-width: 320px) {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  margin-top: 1.5em;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.odometer .odometer-digit {
+  color: #000;
+  background-color: #f2f2f2;
+  font-size: 160px;
+  display: inline-block;
+  width: 150px;
+  height: 225px;
+  line-height: 225px;
+  font-weight: 700;
+  @include border-radius(3px);
+
+  &:nth-child(n+2) {
+    margin-left: 10px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    font-size: 105px;
+    width: 100px;
+    height: 125px;
+    line-height: 125px;
+  }
+
+  @media only screen and (max-width: 320px) {
+    font-size: 80px;
+    width: 85px;
+  }
+}
+
+a.tweet-button {
+  background-color: transparent;
+  border: 2px solid #f2f2f2;
+  border-radius: 4px;
+  padding: 5px 15px;
+  font-size: 18px;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: #f2f2f2;
+
+  &:hover {
+    opacity: .75;
+  }
+
+  .fa {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+}
+
+a.how-works {
+  margin-top: 2.5em;
+  display: block;
+  text-decoration: none;
+  color: #f2f2f2;
+
+  &:hover {
+    opacity: .75;
+  }
+}

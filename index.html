@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown to Rails 5 Release Date</title>
+  <meta name="description" content="Countdown to Rails 5 Release Date" />
+  <meta property="og:title" content="Countdown to Rails 5 Release Date" />
+  <meta property="og:site_name" content="Rails 5 Countdown"/>
+  <meta property="og:url" content="http://rails5countdown.com" />
+  <meta property="og:description" content="Countdown to Rails 5 Release Date" />
+  <link href='https://fonts.googleapis.com/css?family=Exo+2:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="assets/main.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+  <h1>Countdown to Rails 5 Release Date</h1>
+  <div class="odometer">
+    {{range .Digits}}
+      <span class="odometer-digit">{{.}}</span>
+      {{end}}
+  </div>
+  <h2>Days until Rails 5 is released</h2>
+  <a class="tweet-button" href="https://twitter.com/intent/tweet?text=Only+{{.Days}}+days+left+until+%23Rails5+is+released%21&url=http%3A%2F%2Frails5countdown.com">
+    <span class="fa fa-twitter"></span>
+    Tweet this</a>
+  <a class="how-works" href="http://github.com/platzhirsch/rails5countdown">How does this work?</a>
+</body>
+</html>
